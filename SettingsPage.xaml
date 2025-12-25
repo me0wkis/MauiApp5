@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp5.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Settings">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <Label Text="Theme" FontSize="20" />
+        <Picker x:Name="ThemePicker" SelectedIndexChanged="OnThemeChanged">
+            <Picker.Items>
+                <x:String>System</x:String>
+                <x:String>Light</x:String>
+                <x:String>Dark</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Language" FontSize="20" />
+        <Picker x:Name="LanguagePicker" SelectedIndexChanged="OnLanguageChanged">
+            <Picker.Items>
+                <x:String>Russian (ru)</x:String>
+                <x:String>English (en)</x:String>
+            </Picker.Items>
+        </Picker>
+
+    </VerticalStackLayout>
+</ContentPage>

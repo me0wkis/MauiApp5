@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp5.GamePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Game">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Label
+            x:Name="StatusLabel"
+            Text="Player X turn"
+            FontSize="24" />
+
+        <Grid RowSpacing="5" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" x:Name="B00" Clicked="OnCellClicked" FontSize="28" />
+            <Button Grid.Row="0" Grid.Column="1" x:Name="B01" Clicked="OnCellClicked" FontSize="28" />
+            <Button Grid.Row="0" Grid.Column="2" x:Name="B02" Clicked="OnCellClicked" FontSize="28" />
+
+            <Button Grid.Row="1" Grid.Column="0" x:Name="B10" Clicked="OnCellClicked" FontSize="28" />
+            <Button Grid.Row="1" Grid.Column="1" x:Name="B11" Clicked="OnCellClicked" FontSize="28" />
+            <Button Grid.Row="1" Grid.Column="2" x:Name="B12" Clicked="OnCellClicked" FontSize="28" />
+
+            <Button Grid.Row="2" Grid.Column="0" x:Name="B20" Clicked="OnCellClicked" FontSize="28" />
+            <Button Grid.Row="2" Grid.Column="1" x:Name="B21" Clicked="OnCellClicked" FontSize="28" />
+            <Button Grid.Row="2" Grid.Column="2" x:Name="B22" Clicked="OnCellClicked" FontSize="28" />
+        </Grid>
+
+        <Button Text="Restart" Clicked="OnRestartClicked" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp5.ScoresPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Scores">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Local" x:Name="LocalButton" Clicked="OnLocalClicked" />
+            <Button Text="Global" x:Name="GlobalButton" Clicked="OnGlobalClicked" />
+            <Button Text="Sync → Global" x:Name="SyncButton" Clicked="OnSyncClicked" />
+        </HorizontalStackLayout>
+
+        <CollectionView x:Name="ScoresList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Player}" FontAttributes="Bold" />
+                            <Label Text="{Binding Result}" />
+                            <Label Text="{Binding CreatedAt}" FontSize="10" />
+                            <Label Text="{Binding Scope}" FontSize="10" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
